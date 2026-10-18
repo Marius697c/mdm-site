@@ -1,0 +1,355 @@
+{
+  "Meta": {
+    "siteName": "MDM — Mérieux Diagnostic Machine",
+    "defaultDescription": "MDM est une machine de diagnostic destinée aux pharmacies, accompagnée de l'application MDIAG. Projet en cours de développement.",
+    "pages": {
+      "home": { "title": "Le diagnostic rapide en pharmacie", "description": "MDM, une machine de diagnostic pour les pharmacies, et MDIAG, l'application qui rend les résultats accessibles au patient." },
+      "machine": { "title": "La machine", "description": "Découvrez la machine MDM en 3D : écran tactile, test sanguin SPINCHIP, tests nasaux et salivaires, solutions préparées." },
+      "mdiag": { "title": "Application MDIAG", "description": "MDIAG : consulter ses résultats, suivre son historique de santé, trouver une pharmacie équipée et présenter une ordonnance." },
+      "pharmacies": { "title": "Pour les pharmacies", "description": "Ce que MDM peut apporter à votre officine : un nouveau service, de la fidélisation, de la rapidité et peu d'encombrement." },
+      "investors": { "title": "Investisseurs", "description": "La vision du projet MDM, ses deux étapes — la machine puis l'application MDIAG — et son porteur, Marius Mérieux." },
+      "contact": { "title": "Contact", "description": "Investisseur, pharmacien ou simplement curieux : écrivez-nous." },
+      "legal": { "title": "Mentions légales", "description": "Mentions légales du site MDM." },
+      "privacy": { "title": "Politique de confidentialité", "description": "Politique de confidentialité du site MDM." }
+    }
+  },
+  "Common": {
+    "skipToContent": "Aller au contenu principal",
+    "disclaimer": "Projet en cours de développement — visuels non contractuels",
+    "learnMore": "En savoir plus",
+    "contactUs": "Nous contacter",
+    "discoverMachine": "Découvrir la machine",
+    "discoverApp": "Découvrir l'application",
+    "mockupCaption": "Maquette illustrative",
+    "placeholderImage": "Visuel à venir"
+  },
+  "Header": {
+    "logoLabel": "MDM — retour à l'accueil",
+    "by": "by Marius Mérieux",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+    "mainNav": "Navigation principale",
+    "language": "Langue",
+    "nav": {
+      "home": "Accueil",
+      "machine": "La machine",
+      "mdiag": "Application MDIAG",
+      "pharmacies": "Pharmacies",
+      "investors": "Investisseurs",
+      "contact": "Contact"
+    }
+  },
+  "Footer": {
+    "tagline": "Mérieux Diagnostic Machine — un projet de machine de diagnostic pour les pharmacies et son application compagnon MDIAG.",
+    "by": "by Marius Mérieux",
+    "navTitle": "Le projet",
+    "legalTitle": "Informations",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "rights": "MDM. Tous droits réservés."
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "Mérieux Diagnostic Machine",
+      "title": "Le diagnostic rapide, au comptoir de votre pharmacie.",
+      "text": "MDM est une machine de diagnostic pensée pour les pharmacies. Associée à l'application MDIAG, elle rapproche l'analyse du patient et simplifie l'accès aux résultats.",
+      "investor": "Je suis investisseur",
+      "pharmacist": "Je suis pharmacien",
+      "visualAlt": "Illustration de la machine MDM : un boîtier compact avec un écran tactile et des emplacements de test sur le dessus."
+    },
+    "problem": {
+      "eyebrow": "Le problème",
+      "title": "Accéder à un diagnostic reste trop lent.",
+      "text": "Aujourd'hui, obtenir une analyse suppose souvent de multiplier les étapes et d'attendre. MDM part de ce constat.",
+      "items": [
+        { "title": "Un accès lent aux diagnostics", "text": "Entre la prescription, le prélèvement et le rendu des résultats, le parcours du patient s'allonge." },
+        { "title": "Des laboratoires saturés", "text": "La demande d'analyses pèse sur les laboratoires, qui peinent parfois à absorber tous les patients." },
+        { "title": "Des patients qui attendent", "text": "Attendre un rendez-vous, puis attendre un résultat : une incertitude difficile à vivre pour les patients." }
+      ]
+    },
+    "solution": {
+      "eyebrow": "La solution",
+      "title": "Trois temps, au plus près du patient.",
+      "text": "La pharmacie, lieu de santé de proximité, devient un point d'accès au diagnostic.",
+      "steps": [
+        { "title": "Prélèvement en pharmacie", "text": "Le pharmacien réalise le prélèvement adapté : sang, échantillon nasal ou salivaire, ou solution préparée." },
+        { "title": "Analyse par la machine", "text": "L'échantillon est placé dans l'emplacement dédié de la machine MDM, qui prend en charge l'analyse." },
+        { "title": "Résultats dans MDIAG", "text": "Le patient retrouve ses résultats dans l'application MDIAG, de façon claire et sécurisée." }
+      ],
+      "stepLabel": "Étape"
+    },
+    "preview": {
+      "eyebrow": "Aperçu",
+      "title": "Une machine, une application.",
+      "machine": {
+        "title": "La machine MDM",
+        "text": "Une machine compacte, avec un écran tactile et des emplacements dédiés à chaque type de test. Explorez-la en 3D."
+      },
+      "app": {
+        "title": "L'application MDIAG",
+        "text": "Résultats, historique de santé, pharmacies équipées et ordonnances : tout le suivi du patient dans sa poche."
+      }
+    }
+  },
+  "Machine": {
+    "hero": {
+      "eyebrow": "La machine",
+      "title": "MDM, vue de près.",
+      "text": "Faites tourner la machine, zoomez, et touchez les points lumineux pour découvrir chaque zone."
+    },
+    "viewer": {
+      "label": "Vue 3D interactive de la machine MDM",
+      "help": "Faites glisser pour tourner, pincez ou utilisez la molette pour zoomer. Sélectionnez un point pour en savoir plus.",
+      "loading": "Chargement de la vue 3D…",
+      "unsupported": "La vue 3D n'est pas disponible sur cet appareil. Retrouvez la description des zones ci-dessous.",
+      "zonesTitle": "Zones de la machine",
+      "close": "Fermer la fiche",
+      "hotspotPrefix": "Zone",
+      "placeholder": "Sélectionnez une zone de la machine pour afficher sa fiche."
+    },
+    "hotspots": {
+      "screen": {
+        "title": "Écran tactile",
+        "text": "Situé sur le dessus de la machine, l'écran tactile permet de piloter MDM : lancer un test, suivre son déroulement et guider l'utilisateur."
+      },
+      "spinchip": {
+        "title": "Emplacement SPINCHIP",
+        "text": "Sur le dessus de la machine, cet emplacement accueille le test sanguin SPINCHIP pour les analyses sanguines."
+      },
+      "swab": {
+        "title": "Tests salivaires et nasaux",
+        "text": "Cet emplacement reçoit les tests salivaires et nasaux, destinés à la détection d'infections respiratoires."
+      },
+      "solution": {
+        "title": "Solutions préparées",
+        "text": "Cet emplacement accueille les solutions préparées destinées à détecter une potentielle bactérie."
+      }
+    },
+    "detects": {
+      "eyebrow": "Ce que détecte MDM",
+      "title": "Trois familles d'analyses.",
+      "text": "Chaque type de test dispose de son propre emplacement sur la machine.",
+      "items": [
+        { "title": "Analyses sanguines", "tag": "SPINCHIP", "text": "Des analyses sanguines réalisées à partir du test SPINCHIP inséré sur le dessus de la machine." },
+        { "title": "Infections respiratoires", "tag": "Tests nasaux et salivaires", "text": "Des prélèvements nasaux ou salivaires pour détecter des infections respiratoires." },
+        { "title": "Infections bactériennes", "tag": "Solutions préparées", "text": "Des solutions préparées, destinées à détecter une potentielle bactérie." }
+      ]
+    },
+    "gallery": {
+      "eyebrow": "Galerie",
+      "title": "Rendus 3D",
+      "text": "Les visuels définitifs viendront compléter cette galerie.",
+      "alts": [
+        "Rendu 3D de la machine MDM, vue de trois quarts",
+        "Rendu 3D de la machine MDM, vue de dessus avec l'écran tactile et les emplacements de test",
+        "Rendu 3D de la machine MDM, vue de face",
+        "Rendu 3D de la machine MDM, détail des emplacements de test"
+      ]
+    },
+    "specs": {
+      "eyebrow": "Fiche technique",
+      "title": "Dimensions",
+      "length": "Longueur",
+      "width": "Largeur",
+      "height": "Hauteur",
+      "unit": "cm",
+      "note": "Les autres caractéristiques seront communiquées au fil du développement du projet."
+    }
+  },
+  "Mdiag": {
+    "hero": {
+      "eyebrow": "Application MDIAG",
+      "title": "Les résultats de santé, simplement.",
+      "text": "MDIAG fonctionne avec la machine MDM, mais aussi de façon indépendante : l'application garde son utilité même en dehors d'une pharmacie équipée."
+    },
+    "modes": {
+      "withMachine": { "title": "Avec la machine MDM", "text": "Les résultats des analyses réalisées en pharmacie arrivent directement dans l'application du patient." },
+      "standalone": { "title": "De façon indépendante", "text": "Historique, ordonnances et recherche de pharmacie restent disponibles sans passer par la machine." }
+    },
+    "features": {
+      "eyebrow": "Fonctionnalités",
+      "title": "Ce que permet MDIAG.",
+      "items": [
+        { "title": "Consulter ses résultats d'analyse", "text": "Les résultats sont présentés de façon lisible, analyse par analyse, dès qu'ils sont disponibles." },
+        { "title": "Historique de santé", "text": "Un suivi des tests passés pour retrouver ses résultats et mieux en suivre l'évolution." },
+        { "title": "Trouver une pharmacie équipée MDM", "text": "Une carte pour repérer les pharmacies équipées de la machine à proximité." },
+        { "title": "Recevoir et présenter une ordonnance", "text": "Recevoir une ordonnance émise par un professionnel de santé et la présenter en pharmacie." },
+        { "title": "Inscription sécurisée", "text": "Une inscription via la carte Vitale ou l'identité numérique de santé, pour un service encadré par les autorités de santé." }
+      ]
+    },
+    "security": {
+      "eyebrow": "Sécurité et données de santé",
+      "title": "Une ambition : protéger les données de santé.",
+      "text": "MDIAG est conçu pour respecter le RGPD et l'hébergement de données de santé. Il s'agit d'un objectif de conception : aucune certification n'a été obtenue à ce stade.",
+      "points": [
+        "Conçu pour respecter le RGPD",
+        "Conçu pour respecter l'hébergement de données de santé",
+        "Inscription pensée autour de la carte Vitale et de l'identité numérique de santé"
+      ]
+    },
+    "mock": {
+      "greeting": "Bonjour",
+      "results": {
+        "screenTitle": "Mes résultats",
+        "rows": [ "Analyse sanguine", "Test respiratoire", "Test bactérien" ],
+        "status": "Disponible"
+      },
+      "history": {
+        "screenTitle": "Historique",
+        "rows": [ "Analyse sanguine", "Test nasal", "Test salivaire" ],
+        "status": "Terminé"
+      },
+      "map": {
+        "screenTitle": "Pharmacies MDM",
+        "pin": "Pharmacie équipée",
+        "search": "Rechercher une pharmacie"
+      },
+      "prescription": {
+        "screenTitle": "Mon ordonnance",
+        "from": "Émise par un professionnel de santé",
+        "line": "Ordonnance numérique",
+        "button": "Présenter en pharmacie"
+      },
+      "signup": {
+        "screenTitle": "Inscription",
+        "vitale": "Carte Vitale",
+        "ins": "Identité numérique de santé",
+        "button": "Continuer",
+        "lock": "Connexion sécurisée"
+      }
+    }
+  },
+  "Pharmacies": {
+    "hero": {
+      "eyebrow": "Pour les pharmacies",
+      "title": "Un nouveau service pour votre officine.",
+      "text": "MDM est conçue pour s'intégrer simplement au comptoir et élargir l'offre de santé de proximité de la pharmacie."
+    },
+    "benefits": {
+      "eyebrow": "Bénéfices",
+      "title": "Ce que MDM peut apporter.",
+      "items": [
+        { "title": "Un nouveau service", "text": "Proposer des analyses à vos patients, directement à l'officine." },
+        { "title": "De la fidélisation", "text": "Un service utile et visible qui renforce le lien avec la patientèle." },
+        { "title": "De la rapidité", "text": "Un parcours plus court pour le patient, au plus près de chez lui." },
+        { "title": "Peu d'encombrement", "text": "Une machine compacte de 100 × 60 × 40 cm, pensée pour le comptoir ou l'espace de confidentialité." }
+      ]
+    },
+    "flow": {
+      "eyebrow": "Déroulé d'un test",
+      "title": "Côté pharmacien.",
+      "steps": [
+        { "title": "Accueillir le patient", "text": "Le pharmacien présente le test adapté et recueille le consentement du patient." },
+        { "title": "Réaliser le prélèvement", "text": "Prélèvement sanguin, nasal ou salivaire, ou préparation de la solution selon l'analyse." },
+        { "title": "Insérer le test dans la machine", "text": "Le test est placé dans l'emplacement dédié ; l'écran tactile guide le pharmacien." },
+        { "title": "Lancer l'analyse", "text": "La machine prend en charge l'analyse, pendant que le pharmacien reste disponible pour ses autres patients." },
+        { "title": "Transmettre les résultats", "text": "Les résultats sont mis à disposition du patient dans l'application MDIAG." }
+      ]
+    },
+    "cta": {
+      "title": "Votre officine est intéressée ?",
+      "text": "Dites-nous qui vous êtes : nous reviendrons vers vous pour échanger sur le projet.",
+      "button": "Manifester mon intérêt"
+    }
+  },
+  "Investors": {
+    "hero": {
+      "eyebrow": "Investisseurs",
+      "title": "Rapprocher le diagnostic du patient.",
+      "text": "MDM veut faire de la pharmacie un point d'accès de proximité au diagnostic, et de l'application MDIAG le carnet de suivi du patient."
+    },
+    "vision": {
+      "eyebrow": "Vision",
+      "title": "Un diagnostic plus proche, plus fluide.",
+      "text": "Les laboratoires sont sollicités et les patients attendent. Les pharmacies, premier lieu de santé de proximité, offrent un cadre naturel pour des analyses rapides, associées à un suivi numérique clair et sécurisé."
+    },
+    "roadmap": {
+      "eyebrow": "Étapes du projet",
+      "title": "Deux étapes.",
+      "items": [
+        { "title": "La machine", "text": "Concevoir et développer la machine MDM : écran tactile, emplacement SPINCHIP, emplacements pour tests nasaux et salivaires et pour solutions préparées." },
+        { "title": "L'application MDIAG", "text": "Développer l'application MDIAG : résultats, historique de santé, pharmacies équipées, ordonnances et inscription sécurisée." }
+      ],
+      "stepLabel": "Étape"
+    },
+    "founder": {
+      "eyebrow": "Porteur du projet",
+      "name": "Marius Mérieux",
+      "role": "Étudiant, porteur du projet MDM",
+      "text": "Marius Mérieux conçoit et porte le projet MDM. Le projet est en cours de développement et recherche des partenaires pour franchir ses prochaines étapes.",
+      "avatarAlt": "Initiales de Marius Mérieux"
+    },
+    "cta": {
+      "title": "Échangeons sur le projet.",
+      "text": "Vous souhaitez en savoir plus sur MDM et ses perspectives ? Écrivez-nous.",
+      "button": "Prendre contact"
+    }
+  },
+  "Contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Parlons de MDM.",
+      "text": "Investisseur, pharmacien ou simplement curieux : laissez-nous un message, nous vous répondrons."
+    },
+    "form": {
+      "name": "Nom",
+      "email": "Adresse e-mail",
+      "profile": "Profil",
+      "profilePlaceholder": "Choisissez un profil",
+      "profiles": { "investor": "Investisseur", "pharmacist": "Pharmacien", "other": "Autre" },
+      "organization": "Organisation",
+      "optional": "(facultatif)",
+      "message": "Message",
+      "consent": "J'accepte que mes données soient utilisées pour répondre à ma demande, conformément à la politique de confidentialité.",
+      "privacyLink": "Politique de confidentialité",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours…",
+      "required": "Les champs sans mention « facultatif » sont obligatoires."
+    },
+    "errors": {
+      "nameRequired": "Veuillez indiquer votre nom.",
+      "emailInvalid": "Veuillez saisir une adresse e-mail valide.",
+      "profileRequired": "Veuillez choisir un profil.",
+      "messageShort": "Votre message est un peu court (10 caractères minimum).",
+      "messageLong": "Votre message est trop long.",
+      "consentRequired": "Vous devez accepter pour envoyer le message.",
+      "server": "Une erreur est survenue lors de l'envoi. Veuillez réessayer plus tard."
+    },
+    "success": {
+      "title": "Message envoyé",
+      "text": "Merci pour votre message. Nous reviendrons vers vous dès que possible.",
+      "again": "Envoyer un autre message"
+    }
+  },
+  "Legal": {
+    "title": "Mentions légales",
+    "intro": "Les informations ci-dessous sont à compléter avant la mise en ligne définitive du site.",
+    "todo": "[À compléter]",
+    "sections": [
+      { "title": "Éditeur du site", "lines": [ "Nom du site : MDM — Mérieux Diagnostic Machine", "Porteur du projet : Marius Mérieux", "Statut juridique : [À compléter]", "Adresse : [À compléter]", "E-mail : [À compléter]" ] },
+      { "title": "Directeur de la publication", "lines": [ "[À compléter]" ] },
+      { "title": "Hébergeur", "lines": [ "Nom : [À compléter]", "Adresse : [À compléter]", "Site web : [À compléter]" ] },
+      { "title": "Propriété intellectuelle", "lines": [ "L'ensemble des contenus du site (textes, visuels, logo, modèles 3D) est la propriété du porteur du projet, sauf mention contraire. Toute reproduction sans autorisation est interdite." ] },
+      { "title": "Avertissement", "lines": [ "Projet en cours de développement — visuels non contractuels. Les informations présentées sur ce site n'ont pas valeur de promesse médicale ni d'engagement commercial." ] }
+    ]
+  },
+  "Privacy": {
+    "title": "Politique de confidentialité",
+    "intro": "Cette page explique comment sont traitées les données transmises via le formulaire de contact. Elle est à compléter avant la mise en ligne définitive.",
+    "sections": [
+      { "title": "Responsable du traitement", "lines": [ "Marius Mérieux — [Adresse et e-mail à compléter]" ] },
+      { "title": "Données collectées", "lines": [ "Via le formulaire de contact : nom, adresse e-mail, profil, organisation (facultatif) et message." ] },
+      { "title": "Finalité", "lines": [ "Répondre à votre demande et échanger sur le projet MDM." ] },
+      { "title": "Base légale", "lines": [ "Votre consentement, recueilli par la case à cocher du formulaire." ] },
+      { "title": "Durée de conservation", "lines": [ "[À compléter]" ] },
+      { "title": "Destinataires et prestataires", "lines": [ "Les messages sont transmis par e-mail grâce au service Resend. [À compléter : localisation des données et garanties]" ] },
+      { "title": "Vos droits", "lines": [ "Vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de limitation. Pour les exercer, écrivez à : [À compléter]. Vous pouvez aussi saisir la CNIL (cnil.fr)." ] },
+      { "title": "Cookies", "lines": [ "Ce site n'utilise pas de cookie de mesure d'audience ou de publicité. [À mettre à jour si cela change]" ] }
+    ]
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "text": "La page demandée n'existe pas ou a été déplacée.",
+    "back": "Retour à l'accueil"
+  }
+}
