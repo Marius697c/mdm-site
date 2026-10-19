@@ -1,0 +1,28 @@
+@import "@fontsource-variable/manrope";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white font-sans text-navy-900 antialiased; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-cyan-500; outline-style: solid; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+  .section { @apply py-20 sm:py-28; }
+  .eyebrow { @apply mb-3 text-sm font-semibold uppercase tracking-widest text-navy-500; }
+  .h1 { @apply text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl; }
+  .h2 { @apply text-3xl font-bold leading-tight tracking-tight sm:text-4xl; }
+  .lead { @apply max-w-2xl text-lg leading-relaxed text-navy-700; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition-colors; }
+  .btn-primary { @apply btn bg-cyan-400 text-navy-950 hover:bg-cyan-300; }
+  .btn-secondary { @apply btn border border-white/40 text-white hover:bg-white/10; }
+  .btn-dark { @apply btn bg-navy-800 text-white hover:bg-navy-700; }
+  .card { @apply rounded-2xl border border-navy-100 bg-white p-6 shadow-soft; }
+}
