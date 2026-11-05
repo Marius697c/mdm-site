@@ -26,3 +26,6 @@
   .btn-dark { @apply btn bg-navy-800 text-white hover:bg-navy-700; }
   .card { @apply rounded-2xl border border-navy-100 bg-white p-6 shadow-soft; }
 }
+
+/* Fond de carte clair : tuiles OSM désaturées et éclaircies (carte des pharmacies). */
+.map-tiles-light { filter: grayscale(0.85) brightness(1.06) contrast(0.88); }

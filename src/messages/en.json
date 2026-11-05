@@ -259,6 +259,31 @@
         { "title": "Send the results", "text": "Results are made available to the patient in the MDIAG app." }
       ]
     },
+    "map": {
+      "eyebrow": "Find a pharmacy",
+      "title": "The pharmacies closest to you.",
+      "text": "Use your location or type your postcode or town: the nearest pharmacies appear on the map and in the list, from closest to furthest.",
+      "label": "Map of nearby pharmacies",
+      "button": "Locate me",
+      "searchLabel": "Postcode or town",
+      "searchPlaceholder": "…or type a postcode or town",
+      "idle": "Click “Locate me” or type your postcode or town.",
+      "locating": "Getting your location…",
+      "searching": "Finding pharmacies…",
+      "found": "{count, plural, one {# pharmacy} other {The # nearest pharmacies}}, from closest to furthest.",
+      "foundNear": "{count, plural, one {# pharmacy} other {The # nearest pharmacies}} to {place}.",
+      "empty": "No pharmacy found nearby. The service covers France (mainland and overseas).",
+      "denied": "Location access denied. Type your postcode or town instead, or allow location access in your browser.",
+      "unsupported": "Your browser does not support geolocation. Type your postcode or town.",
+      "locationError": "Location unavailable right now. Type your postcode or town, or try again.",
+      "error": "Unable to load pharmacies. Check your connection and try again.",
+      "you": "You are here",
+      "phone": "Tel.",
+      "noPhone": "Phone not listed",
+      "directions": "Directions",
+      "privacy": "Your location stays in your browser: MDM neither sends nor stores it.",
+      "source": "Source: French national register of health establishments (FINESS), data.gouv.fr. Base map © OpenStreetMap."
+    },
     "cta": {
       "title": "Is your pharmacy interested?",
       "text": "Tell us who you are: we will get back to you to discuss the project.",
