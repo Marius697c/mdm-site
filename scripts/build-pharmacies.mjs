@@ -140,6 +140,10 @@ async function main() {
     }
   }
   console.log(`${skipped} sans coordonnées exploitables, ${tiles.size} tuiles`);
+  if (etabs.size - skipped < (process.argv[2] ? 1 : 15000)) {
+    console.error("Trop peu de coordonnées converties. Exemples :", lines.filter((l) => l.startsWith("geolocalisation")).slice(0, 3));
+    process.exit(1);
+  }
 
   await fs.rm(OUT_DIR, { recursive: true, force: true });
   await fs.mkdir(path.join(OUT_DIR, "t"), { recursive: true });
