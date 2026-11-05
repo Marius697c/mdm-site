@@ -295,12 +295,10 @@ export function NearbyPharmacies() {
     const q = normalize(query);
     if (q.length < 2 || !communes.length) return [];
     const isCp = /^\d+$/.test(q);
-    const out: Commune[] = [];
-    for (const c of communes) {
-      if (isCp ? c[0].startsWith(q) : normalize(c[1]).startsWith(q)) out.push(c);
-      if (out.length >= 8) break;
-    }
-    return out;
+    const matches = communes.filter((c) => (isCp ? c[0].startsWith(q) : normalize(c[1]).startsWith(q)));
+    // Nom exact d'abord (« Lyon » avant « Lyons-la-Forêt »), puis les plus courts.
+    if (!isCp) matches.sort((a, b) => Number(normalize(b[1]) === q) - Number(normalize(a[1]) === q) || a[1].length - b[1].length);
+    return matches.slice(0, 8);
   }, [query, communes]);
 
   function pickCommune(c: Commune) {
