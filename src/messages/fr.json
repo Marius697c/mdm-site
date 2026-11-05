@@ -259,6 +259,27 @@
         { "title": "Transmettre les résultats", "text": "Les résultats sont mis à disposition du patient dans l'application MDIAG." }
       ]
     },
+    "map": {
+      "eyebrow": "Trouver une pharmacie",
+      "title": "Les pharmacies les plus proches de vous.",
+      "text": "Autorisez la localisation pour afficher sur la carte les pharmacies autour de votre position.",
+      "label": "Carte des pharmacies à proximité",
+      "button": "Me localiser",
+      "refresh": "Actualiser ma position",
+      "idle": "Cliquez sur « Me localiser » pour voir les pharmacies autour de vous.",
+      "locating": "Localisation en cours…",
+      "searching": "Recherche des pharmacies à proximité…",
+      "found": "{count, plural, one {# pharmacie trouvée} other {# pharmacies les plus proches}}, triées par distance.",
+      "empty": "Aucune pharmacie trouvée dans un rayon de 15 km.",
+      "denied": "Localisation refusée. Autorisez l'accès à votre position dans votre navigateur pour utiliser la carte.",
+      "unsupported": "Votre navigateur ne permet pas la géolocalisation.",
+      "error": "Impossible de charger les pharmacies pour le moment. Réessayez dans quelques instants.",
+      "you": "Vous êtes ici",
+      "unnamed": "Pharmacie",
+      "directions": "Itinéraire",
+      "privacy": "Votre position est utilisée uniquement dans votre navigateur pour la recherche ; elle n'est pas enregistrée par MDM.",
+      "source": "Données © contributeurs OpenStreetMap. Les informations (adresse, téléphone) peuvent être incomplètes."
+    },
     "cta": {
       "title": "Votre officine est intéressée ?",
       "text": "Dites-nous qui vous êtes : nous reviendrons vers vous pour échanger sur le projet.",

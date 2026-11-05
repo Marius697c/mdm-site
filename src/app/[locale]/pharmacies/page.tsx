@@ -5,6 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { CardGrid } from "@/components/ui/CardGrid";
 import { Steps } from "@/components/ui/Steps";
 import { CtaBanner } from "@/components/ui/CtaBanner";
+import { NearbyPharmacies } from "@/components/pharmacies/NearbyPharmacies";
 
 type Item = { title: string; text: string };
 
@@ -25,6 +26,9 @@ export default async function PharmaciesPage({ params }: { params: Promise<{ loc
       </Section>
       <Section id="flow" tone="soft" eyebrow={t("flow.eyebrow")} title={t("flow.title")}>
         <Steps items={t.raw("flow.steps") as Item[]} />
+      </Section>
+      <Section id="map" eyebrow={t("map.eyebrow")} title={t("map.title")} text={t("map.text")}>
+        <NearbyPharmacies />
       </Section>
       <CtaBanner title={t("cta.title")} text={t("cta.text")} button={t("cta.button")} query="pharmacist" />
     </>
