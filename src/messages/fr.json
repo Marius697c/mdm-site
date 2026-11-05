@@ -273,6 +273,7 @@
       "empty": "Aucune pharmacie trouvée dans un rayon de 15 km.",
       "denied": "Localisation refusée. Autorisez l'accès à votre position dans votre navigateur pour utiliser la carte.",
       "unsupported": "Votre navigateur ne permet pas la géolocalisation.",
+      "locationError": "Impossible de déterminer votre position. Vérifiez que la localisation est activée sur votre appareil, puis réessayez.",
       "error": "Impossible de charger les pharmacies pour le moment. Réessayez dans quelques instants.",
       "you": "Vous êtes ici",
       "unnamed": "Pharmacie",

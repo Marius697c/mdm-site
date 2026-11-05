@@ -273,6 +273,7 @@
       "empty": "No pharmacy found within 15 km.",
       "denied": "Location access denied. Allow location access in your browser to use the map.",
       "unsupported": "Your browser does not support geolocation.",
+      "locationError": "Unable to determine your location. Check that location services are enabled on your device, then try again.",
       "error": "Unable to load pharmacies right now. Please try again in a moment.",
       "you": "You are here",
       "unnamed": "Pharmacy",

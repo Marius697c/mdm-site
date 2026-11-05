@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import type { Map as LeafletMap, LayerGroup } from "leaflet";
+import { ALLOWED_RADII, queryOverpass, type OverpassElement } from "@/lib/overpass";
 
 type Pharmacy = {
   id: string;
@@ -15,33 +16,18 @@ type Pharmacy = {
   distance: number; // mètres
 };
 
-type Status = "idle" | "locating" | "searching" | "ready" | "empty" | "denied" | "unsupported" | "error";
+type Status = "idle" | "locating" | "searching" | "ready" | "empty" | "denied" | "unsupported" | "locationError" | "error";
 
 // Centre par défaut (France) avant géolocalisation.
 const DEFAULT_CENTER: [number, number] = [46.6, 2.4];
 const DEFAULT_ZOOM = 5;
 const MAX_RESULTS = 10;
 // Rayons de recherche successifs (m) : on élargit tant qu'on a trop peu de résultats.
-const RADII = [3000, 15000];
+const RADII = ALLOWED_RADII;
 // Au-delà, on abandonne la requête et on affiche une erreur.
-const REQUEST_TIMEOUT_MS = 10000;
+const REQUEST_TIMEOUT_MS = 12000;
 // Les résultats d'une zone (~200 m) sont gardés 10 min pour un affichage instantané.
 const CACHE_TTL_MS = 10 * 60 * 1000;
-// API Overpass (OpenStreetMap), gratuite et sans clé. Plusieurs serveurs publics.
-const OVERPASS_ENDPOINTS = [
-  "https://overpass-api.de/api/interpreter",
-  "https://overpass.kumi.systems/api/interpreter",
-  "https://overpass.private.coffee/api/interpreter",
-];
-
-type OverpassElement = {
-  id: number;
-  type: string;
-  lat?: number;
-  lon?: number;
-  center?: { lat: number; lon: number };
-  tags?: Record<string, string>;
-};
 
 function distanceMeters(a: [number, number], b: [number, number]) {
   const R = 6371000;
@@ -52,28 +38,20 @@ function distanceMeters(a: [number, number], b: [number, number]) {
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 
-// Interroge les serveurs Overpass en parallèle et garde la première réponse valide :
-// un serveur public saturé ne bloque plus la recherche.
-async function queryOverpass(lat: number, lon: number, radius: number): Promise<OverpassElement[]> {
-  const q = `[out:json][timeout:${Math.round(REQUEST_TIMEOUT_MS / 1000)}];nwr["amenity"="pharmacy"](around:${radius},${lat.toFixed(5)},${lon.toFixed(5)});out center tags;`;
-  const controllers = OVERPASS_ENDPOINTS.map(() => new AbortController());
-  const timer = setTimeout(() => controllers.forEach((c) => c.abort()), REQUEST_TIMEOUT_MS);
+// Navigateur → Overpass d'abord (le plus rapide), puis secours via notre propre serveur.
+async function fetchPharmacies(lat: number, lon: number, radius: number): Promise<OverpassElement[]> {
   try {
-    return await Promise.any(
-      OVERPASS_ENDPOINTS.map(async (url, i) => {
-        const res = await fetch(url, {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: `data=${encodeURIComponent(q)}`,
-          signal: controllers[i].signal,
-        });
-        if (!res.ok) throw new Error(`Overpass ${res.status}`);
-        const json = (await res.json()) as { elements?: OverpassElement[] };
-        // Annule les autres requêtes encore en cours.
-        controllers.forEach((c, j) => j !== i && c.abort());
-        return json.elements ?? [];
-      }),
-    );
+    return await queryOverpass(lat, lon, radius, REQUEST_TIMEOUT_MS);
+  } catch (e) {
+    console.warn("Overpass direct indisponible, secours serveur", e);
+  }
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 25000);
+  try {
+    const res = await fetch(`/api/pharmacies?lat=${lat}&lon=${lon}&radius=${radius}`, { signal: controller.signal });
+    if (!res.ok) throw new Error(`api ${res.status}`);
+    const json = (await res.json()) as { elements: OverpassElement[] };
+    return json.elements;
   } finally {
     clearTimeout(timer);
   }
@@ -98,7 +76,7 @@ function toPharmacy(el: OverpassElement, origin: [number, number], fallbackName:
 }
 
 function cacheKey(origin: [number, number]) {
-  return `mdm-pharmacies:${origin[0].toFixed(3)},${origin[1].toFixed(3)}`;
+  return `mdm-pharmacies-v2:${origin[0].toFixed(3)},${origin[1].toFixed(3)}`;
 }
 
 function readCache(origin: [number, number]): Pharmacy[] | null {
@@ -106,7 +84,7 @@ function readCache(origin: [number, number]): Pharmacy[] | null {
     const raw = sessionStorage.getItem(cacheKey(origin));
     if (!raw) return null;
     const { at, list } = JSON.parse(raw) as { at: number; list: Pharmacy[] };
-    if (Date.now() - at > CACHE_TTL_MS) return null;
+    if (Date.now() - at > CACHE_TTL_MS || !list.length) return null;
     return list.map((p) => ({ ...p, distance: distanceMeters(origin, [p.lat, p.lon]) })).sort((a, b) => a.distance - b.distance);
   } catch {
     return null;
@@ -126,7 +104,7 @@ async function findNearest(origin: [number, number], fallbackName: string) {
   if (cached) return cached;
   let found: Pharmacy[] = [];
   for (const radius of RADII) {
-    const elements = await queryOverpass(origin[0], origin[1], radius);
+    const elements = await fetchPharmacies(origin[0], origin[1], radius);
     found = elements
       .map((el) => toPharmacy(el, origin, fallbackName))
       .filter((p): p is Pharmacy => p !== null)
@@ -134,7 +112,7 @@ async function findNearest(origin: [number, number], fallbackName: string) {
     if (found.length >= 5) break;
   }
   const list = found.slice(0, MAX_RESULTS);
-  writeCache(origin, list);
+  if (list.length) writeCache(origin, list);
   return list;
 }
 
@@ -160,9 +138,12 @@ export function NearbyPharmacies() {
       if (cancelled || !mapEl.current || mapRef.current) return;
       leafletRef.current = L;
       const map = L.map(mapEl.current, { scrollWheelZoom: false }).setView(DEFAULT_CENTER, DEFAULT_ZOOM);
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      // Fond clair et épuré (CARTO Positron), gratuit avec attribution.
+      L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+        maxZoom: 20,
+        subdomains: "abcd",
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
       }).addTo(map);
       layerRef.current = L.layerGroup().addTo(map);
       mapRef.current = map;
@@ -186,7 +167,13 @@ export function NearbyPharmacies() {
     if (!L || !map || !layer) return;
     layer.clearLayers();
 
-    L.circleMarker(origin, { radius: 9, color: "#ffffff", weight: 3, fillColor: "#22d3ee", fillOpacity: 1 })
+    const youIcon = L.divIcon({
+      className: "",
+      html: '<span style="display:block;width:18px;height:18px;border-radius:9999px;background:#22d3ee;border:3px solid #fff;box-shadow:0 0 0 6px rgba(34,211,238,.25),0 2px 6px rgba(0,0,0,.3)"></span>',
+      iconSize: [18, 18],
+      iconAnchor: [9, 9],
+    });
+    L.marker(origin, { icon: youIcon, zIndexOffset: 1000, keyboard: false })
       .bindTooltip(t("you"))
       .addTo(layer);
 
@@ -252,7 +239,7 @@ export function NearbyPharmacies() {
           setStatus("error");
         }
       },
-      (err) => setStatus(err.code === err.PERMISSION_DENIED ? "denied" : "error"),
+      (err) => setStatus(err.code === err.PERMISSION_DENIED ? "denied" : "locationError"),
       // Précision « réseau » : quelques centaines de mètres suffisent et c'est bien plus rapide que le GPS.
       { enableHighAccuracy: false, timeout: 10000, maximumAge: 5 * 60 * 1000 },
     );
@@ -278,6 +265,7 @@ export function NearbyPharmacies() {
     : status === "empty" ? t("empty")
     : status === "denied" ? t("denied")
     : status === "unsupported" ? t("unsupported")
+    : status === "locationError" ? t("locationError")
     : status === "error" ? t("error")
     : t("found", { count: pharmacies.length });
 
