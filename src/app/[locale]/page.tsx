@@ -4,7 +4,8 @@ import { buildMetadata } from "@/lib/page-metadata";
 import { Section } from "@/components/ui/Section";
 import { Steps } from "@/components/ui/Steps";
 import { CardGrid } from "@/components/ui/CardGrid";
-import { MachineIllustration } from "@/components/ui/MachineIllustration";
+import { MachineIllustration, type MachineZoneLabel } from "@/components/ui/MachineIllustration";
+import { HOTSPOTS } from "@/lib/hotspots";
 import { PhoneMockup } from "@/components/mdiag/PhoneMockups";
 
 type Item = { title: string; text: string };
@@ -18,6 +19,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale);
   const t = await getTranslations("Home");
   const tc = await getTranslations("Common");
+  const tm = await getTranslations("Machine");
+  const zones: MachineZoneLabel[] = HOTSPOTS.map((h) => ({
+    title: tm(`hotspots.${h.id}.title`),
+    tech: tm(`hotspots.${h.id}.tech`),
+    future: h.id === "saliva",
+  }));
 
   return (
     <>
@@ -32,7 +39,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <Link href={{ pathname: "/contact", query: { profile: "pharmacist" } }} className="btn-secondary">{t("hero.pharmacist")}</Link>
             </div>
           </div>
-          <MachineIllustration alt={t("hero.visualAlt")} />
+          <MachineIllustration alt={t("hero.visualAlt")} zones={zones} />
         </div>
       </section>
 

@@ -34,7 +34,8 @@ function MarkerTracker({ markers }: Pick<Props, "markers">) {
       point.set(h.position[0], h.position[1], h.position[2]).project(camera);
       const x = (point.x * 0.5 + 0.5) * size.width;
       const y = (-point.y * 0.5 + 0.5) * size.height;
-      el.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+      // Le cercle numéroté (à gauche du bouton) est centré sur le point 3D.
+      el.style.transform = `translate(${x}px, ${y}px) translate(-20px, -50%)`;
       el.style.visibility = point.z < 1 ? "visible" : "hidden";
     });
   });
@@ -43,7 +44,7 @@ function MarkerTracker({ markers }: Pick<Props, "markers">) {
 
 export default function MachineScene({ useGlb, markers }: Props) {
   return (
-    <Canvas dpr={[1, 2]} camera={{ position: [11, 8, 13], fov: 38 }} aria-hidden="true">
+    <Canvas dpr={[1, 2]} camera={{ position: [7, 12, 13], fov: 38 }} aria-hidden="true">
       <ambientLight intensity={0.9} />
       <directionalLight position={[6, 10, 8]} intensity={1.6} />
       <directionalLight position={[-8, 4, -6]} intensity={0.5} color="#7be4f2" />

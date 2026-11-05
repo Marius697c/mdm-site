@@ -35,7 +35,7 @@ export default async function MachinePage({ params }: { params: Promise<{ locale
       </section>
 
       <Section id="detects" tone="soft" eyebrow={t("detects.eyebrow")} title={t("detects.title")} text={t("detects.text")}>
-        <CardGrid items={t.raw("detects.items") as Item[]} />
+        <CardGrid items={t.raw("detects.items") as Item[]} columns={4} />
       </Section>
 
       <Section id="gallery" eyebrow={t("gallery.eyebrow")} title={t("gallery.title")} text={t("gallery.text")}>

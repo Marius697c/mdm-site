@@ -55,7 +55,7 @@
       "text": "MDM est une machine de diagnostic pensée pour les pharmacies. Associée à l'application MDIAG, elle rapproche l'analyse du patient et simplifie l'accès aux résultats.",
       "investor": "Je suis investisseur",
       "pharmacist": "Je suis pharmacien",
-      "visualAlt": "Illustration de la machine MDM : un boîtier compact avec un écran tactile et des emplacements de test sur le dessus."
+      "visualAlt": "Illustration détaillée de la machine MDM : écran tactile, emplacements pour test sanguin SPINCHIP, tests nasaux BIOFIRE SPOTFIRE, tests salivaires et solutions de détection des bactéries."
     },
     "problem": {
       "eyebrow": "Le problème",
@@ -105,34 +105,47 @@
       "zonesTitle": "Zones de la machine",
       "close": "Fermer la fiche",
       "hotspotPrefix": "Zone",
-      "placeholder": "Sélectionnez une zone de la machine pour afficher sa fiche."
+      "placeholder": "Sélectionnez une zone de la machine pour afficher sa fiche.",
+      "techLabel": "Technologie",
+      "techNote": "Technologies de référence envisagées pour chaque compartiment. Projet en cours de développement, visuels non contractuels.",
+      "futureBadge": "À venir"
     },
     "hotspots": {
       "screen": {
         "title": "Écran tactile",
+        "tech": "Interface de pilotage",
         "text": "Situé sur le dessus de la machine, l'écran tactile permet de piloter MDM : lancer un test, suivre son déroulement et guider l'utilisateur."
       },
       "spinchip": {
-        "title": "Emplacement SPINCHIP",
-        "text": "Sur le dessus de la machine, cet emplacement accueille le test sanguin SPINCHIP pour les analyses sanguines."
+        "title": "Emplacement test sanguin",
+        "tech": "SPINCHIP (bioMérieux)",
+        "text": "Immunoessai en microfluidique centrifuge sur cartouche jetable, réalisé à partir d'une simple goutte de sang. Résultat en 10 minutes environ."
       },
-      "swab": {
-        "title": "Tests salivaires et nasaux",
-        "text": "Cet emplacement reçoit les tests salivaires et nasaux, destinés à la détection d'infections respiratoires."
+      "nasal": {
+        "title": "Emplacement tests nasaux",
+        "tech": "BIOFIRE SPOTFIRE (bioMérieux)",
+        "text": "PCR multiplexe nichée avec lecture par fluorescence et analyse de la courbe de fusion, pour identifier les agents d'infections respiratoires. Résultat en 15 minutes environ."
+      },
+      "saliva": {
+        "title": "Emplacement tests salivaires",
+        "tech": "Extension future de la PCR SPOTFIRE",
+        "text": "Emplacement prévu pour étendre la PCR SPOTFIRE aux prélèvements salivaires. Il n'existe pas encore de test bioMérieux validé sur la salive : cette zone est une évolution future."
       },
       "solution": {
-        "title": "Solutions préparées",
-        "text": "Cet emplacement accueille les solutions préparées destinées à détecter une potentielle bactérie."
+        "title": "Solutions de détection des bactéries",
+        "tech": "PCR en temps réel (type BIOFIRE / GENE-UP)",
+        "text": "Les solutions préparées sont analysées par PCR en temps réel pour détecter une bactérie. En complément, l'identification par VITEK MS PRIME (spectrométrie de masse MALDI-TOF) est réalisée en laboratoire partenaire, car elle nécessite une culture de 18 à 24 h."
       }
     },
     "detects": {
       "eyebrow": "Ce que détecte MDM",
-      "title": "Trois familles d'analyses.",
-      "text": "Chaque type de test dispose de son propre emplacement sur la machine.",
+      "title": "Quatre compartiments, quatre technologies.",
+      "text": "Chaque type de test dispose de son propre emplacement sur la machine, associé à une technologie de diagnostic.",
       "items": [
-        { "title": "Analyses sanguines", "tag": "SPINCHIP", "text": "Des analyses sanguines réalisées à partir du test SPINCHIP inséré sur le dessus de la machine." },
-        { "title": "Infections respiratoires", "tag": "Tests nasaux et salivaires", "text": "Des prélèvements nasaux ou salivaires pour détecter des infections respiratoires." },
-        { "title": "Infections bactériennes", "tag": "Solutions préparées", "text": "Des solutions préparées, destinées à détecter une potentielle bactérie." }
+        { "title": "Analyses sanguines", "tag": "SPINCHIP · immunoessai microfluidique", "text": "Une goutte de sang sur cartouche jetable, analysée par microfluidique centrifuge en 10 minutes environ." },
+        { "title": "Infections respiratoires", "tag": "BIOFIRE SPOTFIRE · PCR multiplexe", "text": "Un prélèvement nasal analysé par PCR multiplexe nichée et lecture par fluorescence en 15 minutes environ." },
+        { "title": "Tests salivaires", "tag": "Extension future de SPOTFIRE", "text": "Un emplacement prévu pour la salive, en attendant un test validé sur ce type de prélèvement." },
+        { "title": "Infections bactériennes", "tag": "PCR en temps réel · VITEK MS PRIME en laboratoire", "text": "Détection par PCR en temps réel dans la machine ; identification MALDI-TOF en laboratoire partenaire après 18 à 24 h de culture." }
       ]
     },
     "gallery": {

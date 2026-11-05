@@ -71,13 +71,25 @@ export function MachineViewer() {
                 aria-label={labelFor(h.id)}
                 aria-pressed={selected === h.id}
                 style={{ visibility: "hidden" }}
-                className={`absolute left-0 top-0 flex h-9 w-9 items-center justify-center rounded-full border-2 text-sm font-bold shadow-lg hover:scale-110 ${
+                className={`group absolute left-0 top-0 flex items-center gap-2 rounded-full border-2 p-1 text-sm font-bold shadow-lg transition-colors ${
                   selected === h.id
-                    ? "border-white bg-cyan-400 text-navy-950"
-                    : "animate-pulse border-cyan-300 bg-navy-900/90 text-cyan-300"
+                    ? "z-10 border-white bg-cyan-400 text-navy-950"
+                    : "border-cyan-300 bg-navy-900/90 text-cyan-300 hover:z-10 hover:bg-navy-800"
                 }`}
               >
-                {i + 1}
+                <span
+                  className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full ${
+                    selected === h.id ? "bg-navy-950 text-cyan-300" : "animate-pulse bg-cyan-400/20"
+                  }`}
+                >
+                  {i + 1}
+                </span>
+                <span aria-hidden="true" className={`whitespace-nowrap pr-2 text-xs font-semibold ${
+                    selected === h.id ? "hidden sm:inline" : "hidden sm:group-hover:inline sm:group-focus-visible:inline"
+                  }`}
+                >
+                  {t(`hotspots.${h.id}.tech`)}
+                </span>
               </button>
             ))}
         </div>
@@ -99,6 +111,13 @@ export function MachineViewer() {
                   <span aria-hidden="true">✕</span>
                 </button>
               </div>
+              <p className="mt-3 inline-flex flex-wrap items-center gap-2 rounded-full bg-navy-50 px-3 py-1 text-sm font-semibold text-navy-700">
+                <span className="text-navy-500">{t("viewer.techLabel")} :</span>
+                <span className="text-navy-900">{t(`hotspots.${selected}.tech`)}</span>
+                {selected === "saliva" && (
+                  <span className="rounded-full bg-amber-100 px-2 text-xs text-amber-800">{t("viewer.futureBadge")}</span>
+                )}
+              </p>
               <p className="mt-3 leading-relaxed text-navy-700">{t(`hotspots.${selected}.text`)}</p>
             </>
           ) : (
@@ -119,11 +138,15 @@ export function MachineViewer() {
                 }`}
               >
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-navy-800 text-sm text-cyan-300">{i + 1}</span>
-                {t(`hotspots.${h.id}.title`)}
+                <span className="flex flex-col">
+                  {t(`hotspots.${h.id}.title`)}
+                  <span className="text-xs font-medium text-navy-500">{t(`hotspots.${h.id}.tech`)}</span>
+                </span>
               </button>
             </li>
           ))}
         </ul>
+        <p className="text-xs leading-relaxed text-navy-500">{t("viewer.techNote")}</p>
       </div>
     </div>
   );
