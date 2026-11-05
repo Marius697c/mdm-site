@@ -55,7 +55,7 @@
       "text": "MDM is a diagnostic machine designed for pharmacies. Paired with the MDIAG app, it brings analysis closer to the patient and simplifies access to results.",
       "investor": "I'm an investor",
       "pharmacist": "I'm a pharmacist",
-      "visualAlt": "Illustration of the MDM machine: a compact unit with a touchscreen and test slots on top."
+      "visualAlt": "Detailed illustration of the MDM machine: touchscreen, slots for the SPINCHIP blood test, BIOFIRE SPOTFIRE nasal tests, saliva tests and bacteria detection solutions."
     },
     "problem": {
       "eyebrow": "The problem",
@@ -105,34 +105,47 @@
       "zonesTitle": "Machine areas",
       "close": "Close panel",
       "hotspotPrefix": "Area",
-      "placeholder": "Select an area of the machine to display its details."
+      "placeholder": "Select an area of the machine to display its details.",
+      "techLabel": "Technology",
+      "techNote": "Reference technologies considered for each compartment. Project under development, non-contractual visuals.",
+      "futureBadge": "Coming soon"
     },
     "hotspots": {
       "screen": {
         "title": "Touchscreen",
+        "tech": "Control interface",
         "text": "Located on top of the machine, the touchscreen is used to operate MDM: start a test, follow its progress and guide the user."
       },
       "spinchip": {
-        "title": "SPINCHIP slot",
-        "text": "On top of the machine, this slot receives the SPINCHIP blood test for blood analyses."
+        "title": "Blood test slot",
+        "tech": "SPINCHIP (bioMérieux)",
+        "text": "Centrifugal microfluidic immunoassay on a disposable cartridge, from a single drop of blood. Result in about 10 minutes."
       },
-      "swab": {
-        "title": "Saliva and nasal tests",
-        "text": "This slot receives saliva and nasal tests, intended for detecting respiratory infections."
+      "nasal": {
+        "title": "Nasal test slot",
+        "tech": "BIOFIRE SPOTFIRE (bioMérieux)",
+        "text": "Nested multiplex PCR with fluorescence reading and melting-curve analysis, to identify the agents of respiratory infections. Result in about 15 minutes."
+      },
+      "saliva": {
+        "title": "Saliva test slot",
+        "tech": "Future extension of SPOTFIRE PCR",
+        "text": "Slot planned to extend SPOTFIRE PCR to saliva samples. There is no bioMérieux test validated on saliva yet: this area is a future development."
       },
       "solution": {
-        "title": "Prepared solutions",
-        "text": "This slot receives prepared solutions intended to detect a potential bacterium."
+        "title": "Bacteria detection solutions",
+        "tech": "Real-time PCR (BIOFIRE / GENE-UP type)",
+        "text": "Prepared solutions are analysed by real-time PCR to detect a bacterium. In addition, identification with VITEK MS PRIME (MALDI-TOF mass spectrometry) is carried out in a partner laboratory, as it requires an 18 to 24 h culture."
       }
     },
     "detects": {
       "eyebrow": "What MDM detects",
-      "title": "Three families of analyses.",
-      "text": "Each type of test has its own slot on the machine.",
+      "title": "Four compartments, four technologies.",
+      "text": "Each type of test has its own slot on the machine, paired with a diagnostic technology.",
       "items": [
-        { "title": "Blood analyses", "tag": "SPINCHIP", "text": "Blood analyses performed with the SPINCHIP test inserted on top of the machine." },
-        { "title": "Respiratory infections", "tag": "Nasal and saliva tests", "text": "Nasal or saliva samples to detect respiratory infections." },
-        { "title": "Bacterial infections", "tag": "Prepared solutions", "text": "Prepared solutions intended to detect a potential bacterium." }
+        { "title": "Blood analyses", "tag": "SPINCHIP · microfluidic immunoassay", "text": "A drop of blood on a disposable cartridge, analysed by centrifugal microfluidics in about 10 minutes." },
+        { "title": "Respiratory infections", "tag": "BIOFIRE SPOTFIRE · multiplex PCR", "text": "A nasal sample analysed by nested multiplex PCR with fluorescence reading in about 15 minutes." },
+        { "title": "Saliva tests", "tag": "Future SPOTFIRE extension", "text": "A slot planned for saliva, pending a test validated on this type of sample." },
+        { "title": "Bacterial infections", "tag": "Real-time PCR · VITEK MS PRIME in the lab", "text": "Real-time PCR detection in the machine; MALDI-TOF identification in a partner lab after an 18 to 24 h culture." }
       ]
     },
     "gallery": {
