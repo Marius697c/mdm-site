@@ -21,10 +21,16 @@ const PROJ = {
   LAMBERT_93:
     "+proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
 };
+// La colonne source ressemble à « 1,ATLASANTE,96,BAN,EPSG:2154 RGF93 / Lambert-93 (Métropole) ».
+const UTM_BY_EPSG = { 5490: "20N", 32620: "20N", 4467: "21N", 32621: "21N", 2972: "22N", 32622: "22N", 2975: "40S", 32740: "40S", 4471: "38S", 32738: "38S" };
+const utm = (zone) => `+proj=utm +zone=${parseInt(zone, 10)}${zone.endsWith("S") ? " +south" : ""} +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs`;
 function projectionFor(source) {
-  if (/LAMBERT_93/i.test(source)) return PROJ.LAMBERT_93;
-  const utm = source.match(/UTM_([NS])(\d{1,2})/i);
-  if (utm) return `+proj=utm +zone=${utm[2]}${utm[1].toUpperCase() === "S" ? " +south" : ""} +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs`;
+  const epsg = Number(source.match(/EPSG:(\d+)/i)?.[1]);
+  if (epsg === 2154 || /LAMBERT[-_ ]?93/i.test(source)) return PROJ.LAMBERT_93;
+  if (epsg === 4326) return "WGS84";
+  if (UTM_BY_EPSG[epsg]) return utm(UTM_BY_EPSG[epsg]);
+  const m = source.match(/UTM[_ ]*(?:zone[_ ]*)?([NS]?)(\d{1,2})([NS]?)/i);
+  if (m) return utm(`${m[2]}${(m[1] || m[3] || "N").toUpperCase()}`);
   return null;
 }
 
@@ -85,7 +91,9 @@ async function main() {
   for (const line of lines) {
     const f = line.split(";");
     if (f[0] === "structureet" && f[18] === PHARMACY_CATEGORY) {
-      const street = [f[7], VOIE[f[8]?.toUpperCase()] ?? (f[8] || "").toLowerCase(), titleCase(f[9] || "")]
+      // « rue de la Roquette » : article en minuscule après le type de voie.
+      const voie = titleCase(f[9] || "").replace(/^(De|Du|Des|La|Le|Les|D'|L')(?=[\s'A-ZÀ-Ý])/, (w) => w.toLowerCase());
+      const street = [f[7], VOIE[f[8]?.toUpperCase()] ?? (f[8] || "").toLowerCase(), voie]
         .filter(Boolean)
         .join(" ");
       const extra = [f[10] && titleCase(f[10]), f[11] && titleCase(f[11])].filter(Boolean).join(", ");
@@ -111,10 +119,12 @@ async function main() {
   const tiles = new Map();
   const communes = new Map();
   let skipped = 0;
+  const unknown = new Map();
   for (const [id, e] of etabs) {
     const g = geo.get(id);
     const proj = g && projectionFor(g.source);
     if (!g || !proj || !Number.isFinite(g.x) || !Number.isFinite(g.y)) {
+      if (g && !proj) unknown.set(g.source, (unknown.get(g.source) ?? 0) + 1);
       skipped++;
       continue;
     }
@@ -140,6 +150,7 @@ async function main() {
     }
   }
   console.log(`${skipped} sans coordonnées exploitables, ${tiles.size} tuiles`);
+  if (unknown.size) console.log("Projections non reconnues :", Object.fromEntries(unknown));
   if (etabs.size - skipped < (process.argv[2] ? 1 : 15000)) {
     console.error("Trop peu de coordonnées converties. Exemples :", lines.filter((l) => l.startsWith("geolocalisation")).slice(0, 3));
     process.exit(1);
