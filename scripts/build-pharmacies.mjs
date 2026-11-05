@@ -60,6 +60,15 @@ function titleCase(s) {
     )
     .join(" ");
 }
+// FINESS écrit « L EGLISE » : on remet l'apostrophe.
+const elide = (s) => s.replace(/\b([LlDd]) (?=[AEIOUYHÉÈaeiouyhéè])/g, "$1'");
+// Retire la forme juridique en tête du nom (« SELARL PHARMACIE… » → « Pharmacie… »).
+const LEGAL = /^(SELARL|SELAS|SELASU|SELAFA|SELCA|SARL|EURL|SNC|SAS|SASU|SCP|SPFPL|SA)\b\.?\s+/i;
+function cleanName(raw) {
+  const name = elide(titleCase(raw.replace(LEGAL, "")));
+  return name || "Pharmacie";
+}
+
 function formatPhone(raw) {
   const d = (raw || "").replace(/\D/g, "");
   if (d.length === 10) return d.replace(/(\d{2})(?=\d)/g, "$1 ").trim();
@@ -93,17 +102,17 @@ async function main() {
     if (f[0] === "structureet" && f[18] === PHARMACY_CATEGORY) {
       // « rue de la Roquette » : article en minuscule après le type de voie.
       const voie = titleCase(f[9] || "").replace(/^(De|Du|Des|La|Le|Les|D'|L')(?=[\s'A-ZÀ-Ý])/, (w) => w.toLowerCase());
-      const street = [f[7], VOIE[f[8]?.toUpperCase()] ?? (f[8] || "").toLowerCase(), voie]
-        .filter(Boolean)
-        .join(" ");
-      const extra = [f[10] && titleCase(f[10]), f[11] && titleCase(f[11])].filter(Boolean).join(", ");
+      // numvoie + complément (B, T, Q), type de voie, libellé
+      const num = [f[7], { B: "bis", T: "ter", Q: "quater" }[f[10]?.toUpperCase()] ?? (f[10] || "").toLowerCase()].filter(Boolean).join(" ");
+      const street = elide([num, VOIE[f[8]?.toUpperCase()] ?? (f[8] || "").toLowerCase(), voie].filter(Boolean).join(" "));
+      const extra = f[11] ? elide(titleCase(f[11])) : "";
       const acheminement = (f[15] || "").trim();
       const m = acheminement.match(/^(\d{5})\s+(.*)$/);
       etabs.set(f[1], {
-        name: titleCase(f[4] || f[3] || "Pharmacie"),
+        name: cleanName(f[4] || f[3] || ""),
         address: [street, extra].filter(Boolean).join(", "),
         cp: m ? m[1] : "",
-        city: titleCase(m ? m[2] : acheminement).replace(/\s+Cedex.*$/i, ""),
+        city: elide(titleCase(m ? m[2] : acheminement)).replace(/\s+Cedex.*$/i, ""),
         phone: formatPhone(f[16]),
       });
     } else if (f[0] === "geolocalisation") {
