@@ -39,7 +39,7 @@ const VOIE = {
   ALL: "allée", IMP: "impasse", QUA: "quai", QU: "quai", CRS: "cours", PASS: "passage", SQ: "square", FG: "faubourg",
   RES: "résidence", LOT: "lotissement", CTRE: "centre", CCAL: "centre commercial", ESP: "esplanade", PRO: "promenade",
   PRV: "parvis", RPT: "rond-point", ZA: "ZA", ZAC: "ZAC", ZI: "ZI", HAM: "hameau", LD: "lieu-dit", VOIE: "voie",
-  SEN: "sentier", TRA: "traverse", MTE: "montée", CAR: "carrefour", GR: "grande rue", PTE: "porte", CITE: "cité",
+  SEN: "sentier", GAL: "galerie", CHS: "chaussée", RLE: "ruelle", VLA: "villa", CC: "centre commercial", MAR: "marché", PRT: "port", PKG: "parking", DOM: "domaine", TRA: "traverse", MTE: "montée", CAR: "carrefour", GR: "grande rue", PTE: "porte", CITE: "cité",
 };
 const SMALL = new Set(["de", "du", "des", "la", "le", "les", "et", "en", "sur", "sous", "aux", "au", "à", "l", "d"]);
 function titleCase(s) {
