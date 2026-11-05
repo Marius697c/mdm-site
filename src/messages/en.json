@@ -282,7 +282,7 @@
       "noPhone": "Phone not listed",
       "directions": "Directions",
       "privacy": "Your location stays in your browser: MDM neither sends nor stores it.",
-      "source": "Source: French national register of health establishments (FINESS), data.gouv.fr. Base map © OpenStreetMap, © CARTO."
+      "source": "Source: French national register of health establishments (FINESS), data.gouv.fr. Base map © OpenStreetMap."
     },
     "cta": {
       "title": "Is your pharmacy interested?",

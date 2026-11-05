@@ -282,7 +282,7 @@
       "noPhone": "Téléphone non renseigné",
       "directions": "Itinéraire",
       "privacy": "Votre position reste dans votre navigateur : elle n'est ni envoyée ni enregistrée par MDM.",
-      "source": "Source : fichier national des établissements de santé (FINESS), data.gouv.fr. Fond de carte © OpenStreetMap, © CARTO."
+      "source": "Source : fichier national des établissements de santé (FINESS), data.gouv.fr. Fond de carte © OpenStreetMap."
     },
     "cta": {
       "title": "Votre officine est intéressée ?",

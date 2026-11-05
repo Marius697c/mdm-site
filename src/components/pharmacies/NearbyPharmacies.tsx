@@ -139,12 +139,12 @@ export function NearbyPharmacies() {
       // Molette active seulement après un clic sur la carte, pour ne pas gêner le défilement de la page.
       map.on("click", () => map.scrollWheelZoom.enable());
       map.on("mouseout", () => map.scrollWheelZoom.disable());
-      // Fond clair et épuré (CARTO Positron), gratuit avec attribution.
-      L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-        maxZoom: 20,
-        subdomains: "abcd",
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      // Tuiles OpenStreetMap standard (gratuites, sans clé), éclaircies et désaturées
+      // en CSS (.map-tiles-light dans globals.css) pour un fond clair et épuré.
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        className: "map-tiles-light",
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
       layerRef.current = L.layerGroup().addTo(map);
       mapRef.current = map;
