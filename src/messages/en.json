@@ -366,7 +366,7 @@
     "sections": [
       { "title": "Site publisher", "lines": [ "Site name: MDM — Mérieux Diagnostic Machine", "Project founder: Marius Mérieux", "Legal status: [To be completed]", "Address: [To be completed]", "Email: [To be completed]" ] },
       { "title": "Publication director", "lines": [ "[To be completed]" ] },
-      { "title": "Hosting provider", "lines": [ "Name: [To be completed]", "Address: [To be completed]", "Website: [To be completed]" ] },
+      { "title": "Hosting provider", "lines": [ "Name: Vercel Inc.", "Address: 440 N Barranca Ave #4133, Covina, CA 91723, USA", "Website: vercel.com" ] },
       { "title": "Intellectual property", "lines": [ "All site content (texts, visuals, logo, 3D models) is the property of the project founder unless stated otherwise. Any reproduction without permission is prohibited." ] },
       { "title": "Disclaimer", "lines": [ "Project under development — visuals are not contractual. Information on this site is neither a medical promise nor a commercial commitment." ] }
     ]
