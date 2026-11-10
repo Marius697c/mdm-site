@@ -15,7 +15,7 @@ export const pagePath = (locale: string, page: PageKey) =>
 export async function buildMetadata(locale: string, page: PageKey): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Meta.pages" });
   return {
-    title: page === "home" ? { absolute: `MDM — ${t("home.title")}` } : t(`${page}.title`),
+    title: page === "home" ? { absolute: `Prognos — ${t("home.title")}` } : t(`${page}.title`),
     description: t(`${page}.description`),
     alternates: {
       canonical: pagePath(locale, page),

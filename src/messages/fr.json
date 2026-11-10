@@ -1,16 +1,16 @@
 {
   "Meta": {
-    "siteName": "MDM — Mérieux Diagnostic Machine",
-    "defaultDescription": "MDM est une machine de diagnostic destinée aux pharmacies, accompagnée de l'application MDIAG. Projet en cours de développement.",
+    "siteName": "Prognos",
+    "defaultDescription": "Prognos est une machine de diagnostic destinée aux pharmacies, accompagnée de l'application MDIAG. Projet en cours de développement.",
     "pages": {
-      "home": { "title": "Le diagnostic rapide en pharmacie", "description": "MDM, une machine de diagnostic pour les pharmacies, et MDIAG, l'application qui rend les résultats accessibles au patient." },
-      "machine": { "title": "La machine", "description": "Découvrez la machine MDM en 3D : écran tactile, test sanguin SPINCHIP, tests nasaux et salivaires, solutions préparées." },
+      "home": { "title": "Le diagnostic rapide en pharmacie", "description": "Prognos, une machine de diagnostic pour les pharmacies, et MDIAG, l'application qui rend les résultats accessibles au patient." },
+      "machine": { "title": "La machine", "description": "Découvrez la machine Prognos en 3D : écran tactile, test sanguin SPINCHIP, tests nasaux et salivaires, solutions préparées." },
       "mdiag": { "title": "Application MDIAG", "description": "MDIAG : consulter ses résultats, suivre son historique de santé, trouver une pharmacie équipée et présenter une ordonnance." },
-      "pharmacies": { "title": "Pour les pharmacies", "description": "Ce que MDM peut apporter à votre officine : un nouveau service, de la fidélisation, de la rapidité et peu d'encombrement." },
-      "investors": { "title": "Investisseurs", "description": "La vision du projet MDM, ses deux étapes — la machine puis l'application MDIAG — et son porteur, Marius Mérieux." },
+      "pharmacies": { "title": "Pour les pharmacies", "description": "Ce que Prognos peut apporter à votre officine : un nouveau service, de la fidélisation, de la rapidité et peu d'encombrement." },
+      "investors": { "title": "Investisseurs", "description": "La vision du projet Prognos, ses deux étapes — la machine puis l'application MDIAG — et son porteur, Marius Mérieux." },
       "contact": { "title": "Contact", "description": "Investisseur, pharmacien ou simplement curieux : écrivez-nous." },
-      "legal": { "title": "Mentions légales", "description": "Mentions légales du site MDM." },
-      "privacy": { "title": "Politique de confidentialité", "description": "Politique de confidentialité du site MDM." }
+      "legal": { "title": "Mentions légales", "description": "Mentions légales du site Prognos." },
+      "privacy": { "title": "Politique de confidentialité", "description": "Politique de confidentialité du site Prognos." }
     }
   },
   "Common": {
@@ -24,7 +24,7 @@
     "placeholderImage": "Visuel à venir"
   },
   "Header": {
-    "logoLabel": "MDM — retour à l'accueil",
+    "logoLabel": "Prognos — retour à l'accueil",
     "by": "by Marius Mérieux",
     "menuOpen": "Ouvrir le menu",
     "menuClose": "Fermer le menu",
@@ -40,27 +40,27 @@
     }
   },
   "Footer": {
-    "tagline": "Mérieux Diagnostic Machine — un projet de machine de diagnostic pour les pharmacies et son application compagnon MDIAG.",
+    "tagline": "Prognos — un projet de machine de diagnostic pour les pharmacies et son application compagnon MDIAG.",
     "by": "by Marius Mérieux",
     "navTitle": "Le projet",
     "legalTitle": "Informations",
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",
-    "rights": "MDM. Tous droits réservés."
+    "rights": "Prognos. Tous droits réservés."
   },
   "Home": {
     "hero": {
-      "eyebrow": "Mérieux Diagnostic Machine",
+      "eyebrow": "Machine de diagnostic pour pharmacies",
       "title": "Le diagnostic rapide, au comptoir de votre pharmacie.",
-      "text": "MDM est une machine de diagnostic pensée pour les pharmacies. Associée à l'application MDIAG, elle rapproche l'analyse du patient et simplifie l'accès aux résultats.",
+      "text": "Prognos est une machine de diagnostic pensée pour les pharmacies. Associée à l'application MDIAG, elle rapproche l'analyse du patient et simplifie l'accès aux résultats.",
       "investor": "Je suis investisseur",
       "pharmacist": "Je suis pharmacien",
-      "visualAlt": "Illustration détaillée de la machine MDM : écran tactile, emplacements pour test sanguin SPINCHIP, tests nasaux BIOFIRE SPOTFIRE, tests salivaires et solutions de détection des bactéries."
+      "visualAlt": "Illustration détaillée de la machine Prognos : écran tactile, emplacements pour test sanguin SPINCHIP, tests nasaux BIOFIRE SPOTFIRE, tests salivaires et solutions de détection des bactéries."
     },
     "problem": {
       "eyebrow": "Le problème",
       "title": "Accéder à un diagnostic reste trop lent.",
-      "text": "Aujourd'hui, obtenir une analyse suppose souvent de multiplier les étapes et d'attendre. MDM part de ce constat.",
+      "text": "Aujourd'hui, obtenir une analyse suppose souvent de multiplier les étapes et d'attendre. Prognos part de ce constat.",
       "items": [
         { "title": "Un accès lent aux diagnostics", "text": "Entre la prescription, le prélèvement et le rendu des résultats, le parcours du patient s'allonge." },
         { "title": "Des laboratoires saturés", "text": "La demande d'analyses pèse sur les laboratoires, qui peinent parfois à absorber tous les patients." },
@@ -73,7 +73,7 @@
       "text": "La pharmacie, lieu de santé de proximité, devient un point d'accès au diagnostic.",
       "steps": [
         { "title": "Prélèvement en pharmacie", "text": "Le pharmacien réalise le prélèvement adapté : sang, échantillon nasal ou salivaire, ou solution préparée." },
-        { "title": "Analyse par la machine", "text": "L'échantillon est placé dans l'emplacement dédié de la machine MDM, qui prend en charge l'analyse." },
+        { "title": "Analyse par la machine", "text": "L'échantillon est placé dans l'emplacement dédié de la machine Prognos, qui prend en charge l'analyse." },
         { "title": "Résultats dans MDIAG", "text": "Le patient retrouve ses résultats dans l'application MDIAG, de façon claire et sécurisée." }
       ],
       "stepLabel": "Étape"
@@ -82,7 +82,7 @@
       "eyebrow": "Aperçu",
       "title": "Une machine, une application.",
       "machine": {
-        "title": "La machine MDM",
+        "title": "La machine Prognos",
         "text": "Une machine compacte, avec un écran tactile et des emplacements dédiés à chaque type de test. Explorez-la en 3D."
       },
       "app": {
@@ -94,11 +94,11 @@
   "Machine": {
     "hero": {
       "eyebrow": "La machine",
-      "title": "MDM, vue de près.",
+      "title": "Prognos, vue de près.",
       "text": "Faites tourner la machine, zoomez, et touchez les points lumineux pour découvrir chaque zone."
     },
     "viewer": {
-      "label": "Vue 3D interactive de la machine MDM",
+      "label": "Vue 3D interactive de la machine Prognos",
       "help": "Faites glisser pour tourner, pincez ou utilisez la molette pour zoomer. Sélectionnez un point pour en savoir plus.",
       "loading": "Chargement de la vue 3D…",
       "unsupported": "La vue 3D n'est pas disponible sur cet appareil. Retrouvez la description des zones ci-dessous.",
@@ -114,7 +114,7 @@
       "screen": {
         "title": "Écran tactile",
         "tech": "Interface de pilotage",
-        "text": "Situé sur le dessus de la machine, l'écran tactile permet de piloter MDM : lancer un test, suivre son déroulement et guider l'utilisateur."
+        "text": "Situé sur le dessus de la machine, l'écran tactile permet de piloter Prognos : lancer un test, suivre son déroulement et guider l'utilisateur."
       },
       "spinchip": {
         "title": "Emplacement test sanguin",
@@ -138,7 +138,7 @@
       }
     },
     "detects": {
-      "eyebrow": "Ce que détecte MDM",
+      "eyebrow": "Ce que détecte Prognos",
       "title": "Quatre compartiments, quatre technologies.",
       "text": "Chaque type de test dispose de son propre emplacement sur la machine, associé à une technologie de diagnostic.",
       "items": [
@@ -153,10 +153,10 @@
       "title": "Rendus 3D",
       "text": "Les visuels définitifs viendront compléter cette galerie.",
       "alts": [
-        "Rendu 3D de la machine MDM, vue de trois quarts",
-        "Rendu 3D de la machine MDM, vue de dessus avec l'écran tactile et les emplacements de test",
-        "Rendu 3D de la machine MDM, vue de face",
-        "Rendu 3D de la machine MDM, détail des emplacements de test"
+        "Rendu 3D de la machine Prognos, vue de trois quarts",
+        "Rendu 3D de la machine Prognos, vue de dessus avec l'écran tactile et les emplacements de test",
+        "Rendu 3D de la machine Prognos, vue de face",
+        "Rendu 3D de la machine Prognos, détail des emplacements de test"
       ]
     },
     "specs": {
@@ -173,10 +173,10 @@
     "hero": {
       "eyebrow": "Application MDIAG",
       "title": "Les résultats de santé, simplement.",
-      "text": "MDIAG fonctionne avec la machine MDM, mais aussi de façon indépendante : l'application garde son utilité même en dehors d'une pharmacie équipée."
+      "text": "MDIAG fonctionne avec la machine Prognos, mais aussi de façon indépendante : l'application garde son utilité même en dehors d'une pharmacie équipée."
     },
     "modes": {
-      "withMachine": { "title": "Avec la machine MDM", "text": "Les résultats des analyses réalisées en pharmacie arrivent directement dans l'application du patient." },
+      "withMachine": { "title": "Avec la machine Prognos", "text": "Les résultats des analyses réalisées en pharmacie arrivent directement dans l'application du patient." },
       "standalone": { "title": "De façon indépendante", "text": "Historique, ordonnances et recherche de pharmacie restent disponibles sans passer par la machine." }
     },
     "features": {
@@ -185,7 +185,7 @@
       "items": [
         { "title": "Consulter ses résultats d'analyse", "text": "Les résultats sont présentés de façon lisible, analyse par analyse, dès qu'ils sont disponibles." },
         { "title": "Historique de santé", "text": "Un suivi des tests passés pour retrouver ses résultats et mieux en suivre l'évolution." },
-        { "title": "Trouver une pharmacie équipée MDM", "text": "Une carte pour repérer les pharmacies équipées de la machine à proximité." },
+        { "title": "Trouver une pharmacie équipée Prognos", "text": "Une carte pour repérer les pharmacies équipées de la machine à proximité." },
         { "title": "Recevoir et présenter une ordonnance", "text": "Recevoir une ordonnance émise par un professionnel de santé et la présenter en pharmacie." },
         { "title": "Inscription sécurisée", "text": "Une inscription via la carte Vitale ou l'identité numérique de santé, pour un service encadré par les autorités de santé." }
       ]
@@ -213,7 +213,7 @@
         "status": "Terminé"
       },
       "map": {
-        "screenTitle": "Pharmacies MDM",
+        "screenTitle": "Pharmacies Prognos",
         "pin": "Pharmacie équipée",
         "search": "Rechercher une pharmacie"
       },
@@ -236,11 +236,11 @@
     "hero": {
       "eyebrow": "Pour les pharmacies",
       "title": "Un nouveau service pour votre officine.",
-      "text": "MDM est conçue pour s'intégrer simplement au comptoir et élargir l'offre de santé de proximité de la pharmacie."
+      "text": "Prognos est conçue pour s'intégrer simplement au comptoir et élargir l'offre de santé de proximité de la pharmacie."
     },
     "benefits": {
       "eyebrow": "Bénéfices",
-      "title": "Ce que MDM peut apporter.",
+      "title": "Ce que Prognos peut apporter.",
       "items": [
         { "title": "Un nouveau service", "text": "Proposer des analyses à vos patients, directement à l'officine." },
         { "title": "De la fidélisation", "text": "Un service utile et visible qui renforce le lien avec la patientèle." },
@@ -281,7 +281,7 @@
       "phone": "Tél.",
       "noPhone": "Téléphone non renseigné",
       "directions": "Itinéraire",
-      "privacy": "Votre position reste dans votre navigateur : elle n'est ni envoyée ni enregistrée par MDM.",
+      "privacy": "Votre position reste dans votre navigateur : elle n'est ni envoyée ni enregistrée par Prognos.",
       "source": "Source : fichier national des établissements de santé (FINESS), data.gouv.fr. Fond de carte © OpenStreetMap."
     },
     "cta": {
@@ -294,7 +294,7 @@
     "hero": {
       "eyebrow": "Investisseurs",
       "title": "Rapprocher le diagnostic du patient.",
-      "text": "MDM veut faire de la pharmacie un point d'accès de proximité au diagnostic, et de l'application MDIAG le carnet de suivi du patient."
+      "text": "Prognos veut faire de la pharmacie un point d'accès de proximité au diagnostic, et de l'application MDIAG le carnet de suivi du patient."
     },
     "vision": {
       "eyebrow": "Vision",
@@ -305,7 +305,7 @@
       "eyebrow": "Étapes du projet",
       "title": "Deux étapes.",
       "items": [
-        { "title": "La machine", "text": "Concevoir et développer la machine MDM : écran tactile, emplacement SPINCHIP, emplacements pour tests nasaux et salivaires et pour solutions préparées." },
+        { "title": "La machine", "text": "Concevoir et développer la machine Prognos : écran tactile, emplacement SPINCHIP, emplacements pour tests nasaux et salivaires et pour solutions préparées." },
         { "title": "L'application MDIAG", "text": "Développer l'application MDIAG : résultats, historique de santé, pharmacies équipées, ordonnances et inscription sécurisée." }
       ],
       "stepLabel": "Étape"
@@ -313,20 +313,20 @@
     "founder": {
       "eyebrow": "Porteur du projet",
       "name": "Marius Mérieux",
-      "role": "Étudiant, porteur du projet MDM",
-      "text": "Marius Mérieux conçoit et porte le projet MDM. Le projet est en cours de développement et recherche des partenaires pour franchir ses prochaines étapes.",
+      "role": "Étudiant, porteur du projet Prognos",
+      "text": "Marius Mérieux conçoit et porte le projet Prognos. Le projet est en cours de développement et recherche des partenaires pour franchir ses prochaines étapes.",
       "avatarAlt": "Initiales de Marius Mérieux"
     },
     "cta": {
       "title": "Échangeons sur le projet.",
-      "text": "Vous souhaitez en savoir plus sur MDM et ses perspectives ? Écrivez-nous.",
+      "text": "Vous souhaitez en savoir plus sur Prognos et ses perspectives ? Écrivez-nous.",
       "button": "Prendre contact"
     }
   },
   "Contact": {
     "hero": {
       "eyebrow": "Contact",
-      "title": "Parlons de MDM.",
+      "title": "Parlons de Prognos.",
       "text": "Investisseur, pharmacien ou simplement curieux : laissez-nous un message, nous vous répondrons."
     },
     "form": {
@@ -364,7 +364,7 @@
     "intro": "Les informations ci-dessous sont à compléter avant la mise en ligne définitive du site.",
     "todo": "[À compléter]",
     "sections": [
-      { "title": "Éditeur du site", "lines": [ "Nom du site : MDM — Mérieux Diagnostic Machine", "Porteur du projet : Marius Mérieux", "Statut juridique : [À compléter]", "Adresse : [À compléter]", "E-mail : [À compléter]" ] },
+      { "title": "Éditeur du site", "lines": [ "Nom du site : Prognos", "Porteur du projet : Marius Mérieux", "Statut juridique : [À compléter]", "Adresse : [À compléter]", "E-mail : [À compléter]" ] },
       { "title": "Directeur de la publication", "lines": [ "[À compléter]" ] },
       { "title": "Hébergeur", "lines": [ "Nom : [À compléter]", "Adresse : [À compléter]", "Site web : [À compléter]" ] },
       { "title": "Propriété intellectuelle", "lines": [ "L'ensemble des contenus du site (textes, visuels, logo, modèles 3D) est la propriété du porteur du projet, sauf mention contraire. Toute reproduction sans autorisation est interdite." ] },
@@ -377,7 +377,7 @@
     "sections": [
       { "title": "Responsable du traitement", "lines": [ "Marius Mérieux — [Adresse et e-mail à compléter]" ] },
       { "title": "Données collectées", "lines": [ "Via le formulaire de contact : nom, adresse e-mail, profil, organisation (facultatif) et message." ] },
-      { "title": "Finalité", "lines": [ "Répondre à votre demande et échanger sur le projet MDM." ] },
+      { "title": "Finalité", "lines": [ "Répondre à votre demande et échanger sur le projet Prognos." ] },
       { "title": "Base légale", "lines": [ "Votre consentement, recueilli par la case à cocher du formulaire." ] },
       { "title": "Durée de conservation", "lines": [ "[À compléter]" ] },
       { "title": "Destinataires et prestataires", "lines": [ "Les messages sont transmis par e-mail grâce au service Resend. [À compléter : localisation des données et garanties]" ] },

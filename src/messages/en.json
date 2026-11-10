@@ -1,16 +1,16 @@
 {
   "Meta": {
-    "siteName": "MDM — Mérieux Diagnostic Machine",
-    "defaultDescription": "MDM is a diagnostic machine designed for pharmacies, with its companion app MDIAG. Project under development.",
+    "siteName": "Prognos",
+    "defaultDescription": "Prognos is a diagnostic machine designed for pharmacies, with its companion app MDIAG. Project under development.",
     "pages": {
-      "home": { "title": "Fast diagnostics in pharmacies", "description": "MDM, a diagnostic machine for pharmacies, and MDIAG, the app that puts results in patients' hands." },
-      "machine": { "title": "The machine", "description": "Explore the MDM machine in 3D: touchscreen, SPINCHIP blood test, nasal and saliva tests, prepared solutions." },
+      "home": { "title": "Fast diagnostics in pharmacies", "description": "Prognos, a diagnostic machine for pharmacies, and MDIAG, the app that puts results in patients' hands." },
+      "machine": { "title": "The machine", "description": "Explore the Prognos machine in 3D: touchscreen, SPINCHIP blood test, nasal and saliva tests, prepared solutions." },
       "mdiag": { "title": "MDIAG app", "description": "MDIAG: view your results, track your health history, find an equipped pharmacy and present a prescription." },
-      "pharmacies": { "title": "For pharmacies", "description": "What MDM can bring to your pharmacy: a new service, customer loyalty, speed and a small footprint." },
-      "investors": { "title": "Investors", "description": "The MDM project vision, its two stages — the machine, then the MDIAG app — and its founder, Marius Mérieux." },
+      "pharmacies": { "title": "For pharmacies", "description": "What Prognos can bring to your pharmacy: a new service, customer loyalty, speed and a small footprint." },
+      "investors": { "title": "Investors", "description": "The Prognos project vision, its two stages — the machine, then the MDIAG app — and its founder, Marius Mérieux." },
       "contact": { "title": "Contact", "description": "Investor, pharmacist or just curious: get in touch." },
-      "legal": { "title": "Legal notice", "description": "Legal notice of the MDM website." },
-      "privacy": { "title": "Privacy policy", "description": "Privacy policy of the MDM website." }
+      "legal": { "title": "Legal notice", "description": "Legal notice of the Prognos website." },
+      "privacy": { "title": "Privacy policy", "description": "Privacy policy of the Prognos website." }
     }
   },
   "Common": {
@@ -24,7 +24,7 @@
     "placeholderImage": "Visual coming soon"
   },
   "Header": {
-    "logoLabel": "MDM — back to home",
+    "logoLabel": "Prognos — back to home",
     "by": "by Marius Mérieux",
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
@@ -40,27 +40,27 @@
     }
   },
   "Footer": {
-    "tagline": "Mérieux Diagnostic Machine — a diagnostic machine project for pharmacies, with its companion app MDIAG.",
+    "tagline": "Prognos — a diagnostic machine project for pharmacies, with its companion app MDIAG.",
     "by": "by Marius Mérieux",
     "navTitle": "The project",
     "legalTitle": "Information",
     "legal": "Legal notice",
     "privacy": "Privacy policy",
-    "rights": "MDM. All rights reserved."
+    "rights": "Prognos. All rights reserved."
   },
   "Home": {
     "hero": {
-      "eyebrow": "Mérieux Diagnostic Machine",
+      "eyebrow": "Diagnostic machine for pharmacies",
       "title": "Fast diagnostics, right at your pharmacy counter.",
-      "text": "MDM is a diagnostic machine designed for pharmacies. Paired with the MDIAG app, it brings analysis closer to the patient and simplifies access to results.",
+      "text": "Prognos is a diagnostic machine designed for pharmacies. Paired with the MDIAG app, it brings analysis closer to the patient and simplifies access to results.",
       "investor": "I'm an investor",
       "pharmacist": "I'm a pharmacist",
-      "visualAlt": "Detailed illustration of the MDM machine: touchscreen, slots for the SPINCHIP blood test, BIOFIRE SPOTFIRE nasal tests, saliva tests and bacteria detection solutions."
+      "visualAlt": "Detailed illustration of the Prognos machine: touchscreen, slots for the SPINCHIP blood test, BIOFIRE SPOTFIRE nasal tests, saliva tests and bacteria detection solutions."
     },
     "problem": {
       "eyebrow": "The problem",
       "title": "Getting a diagnosis is still too slow.",
-      "text": "Today, getting an analysis often means going through several steps and waiting. MDM starts from that observation.",
+      "text": "Today, getting an analysis often means going through several steps and waiting. Prognos starts from that observation.",
       "items": [
         { "title": "Slow access to diagnostics", "text": "Between the prescription, the sampling and the results, the patient's journey gets longer." },
         { "title": "Overloaded laboratories", "text": "Demand for analyses weighs on laboratories, which sometimes struggle to take in every patient." },
@@ -73,7 +73,7 @@
       "text": "The pharmacy, a local healthcare place, becomes an access point to diagnostics.",
       "steps": [
         { "title": "Sampling at the pharmacy", "text": "The pharmacist takes the appropriate sample: blood, nasal or saliva sample, or a prepared solution." },
-        { "title": "Analysis by the machine", "text": "The sample is placed in the dedicated slot of the MDM machine, which handles the analysis." },
+        { "title": "Analysis by the machine", "text": "The sample is placed in the dedicated slot of the Prognos machine, which handles the analysis." },
         { "title": "Results in MDIAG", "text": "The patient finds their results in the MDIAG app, clearly and securely." }
       ],
       "stepLabel": "Step"
@@ -82,7 +82,7 @@
       "eyebrow": "Preview",
       "title": "One machine, one app.",
       "machine": {
-        "title": "The MDM machine",
+        "title": "The Prognos machine",
         "text": "A compact machine with a touchscreen and dedicated slots for each type of test. Explore it in 3D."
       },
       "app": {
@@ -94,11 +94,11 @@
   "Machine": {
     "hero": {
       "eyebrow": "The machine",
-      "title": "MDM, up close.",
+      "title": "Prognos, up close.",
       "text": "Rotate the machine, zoom in, and tap the glowing points to discover each area."
     },
     "viewer": {
-      "label": "Interactive 3D view of the MDM machine",
+      "label": "Interactive 3D view of the Prognos machine",
       "help": "Drag to rotate, pinch or use the wheel to zoom. Select a point to learn more.",
       "loading": "Loading 3D view…",
       "unsupported": "The 3D view is not available on this device. See the description of each area below.",
@@ -114,7 +114,7 @@
       "screen": {
         "title": "Touchscreen",
         "tech": "Control interface",
-        "text": "Located on top of the machine, the touchscreen is used to operate MDM: start a test, follow its progress and guide the user."
+        "text": "Located on top of the machine, the touchscreen is used to operate Prognos: start a test, follow its progress and guide the user."
       },
       "spinchip": {
         "title": "Blood test slot",
@@ -138,7 +138,7 @@
       }
     },
     "detects": {
-      "eyebrow": "What MDM detects",
+      "eyebrow": "What Prognos detects",
       "title": "Four compartments, four technologies.",
       "text": "Each type of test has its own slot on the machine, paired with a diagnostic technology.",
       "items": [
@@ -153,10 +153,10 @@
       "title": "3D renders",
       "text": "Final visuals will complete this gallery.",
       "alts": [
-        "3D render of the MDM machine, three-quarter view",
-        "3D render of the MDM machine, top view with the touchscreen and test slots",
-        "3D render of the MDM machine, front view",
-        "3D render of the MDM machine, detail of the test slots"
+        "3D render of the Prognos machine, three-quarter view",
+        "3D render of the Prognos machine, top view with the touchscreen and test slots",
+        "3D render of the Prognos machine, front view",
+        "3D render of the Prognos machine, detail of the test slots"
       ]
     },
     "specs": {
@@ -173,10 +173,10 @@
     "hero": {
       "eyebrow": "MDIAG app",
       "title": "Health results, made simple.",
-      "text": "MDIAG works with the MDM machine, but also independently: the app remains useful even outside an equipped pharmacy."
+      "text": "MDIAG works with the Prognos machine, but also independently: the app remains useful even outside an equipped pharmacy."
     },
     "modes": {
-      "withMachine": { "title": "With the MDM machine", "text": "Results of analyses performed at the pharmacy arrive directly in the patient's app." },
+      "withMachine": { "title": "With the Prognos machine", "text": "Results of analyses performed at the pharmacy arrive directly in the patient's app." },
       "standalone": { "title": "Independently", "text": "History, prescriptions and pharmacy search remain available without going through the machine." }
     },
     "features": {
@@ -185,7 +185,7 @@
       "items": [
         { "title": "View your analysis results", "text": "Results are presented in a readable way, analysis by analysis, as soon as they are available." },
         { "title": "Health history", "text": "A record of past tests to find your results and better follow their evolution." },
-        { "title": "Find an MDM-equipped pharmacy", "text": "A map to locate nearby pharmacies equipped with the machine." },
+        { "title": "Find a Prognos-equipped pharmacy", "text": "A map to locate nearby pharmacies equipped with the machine." },
         { "title": "Receive and present a prescription", "text": "Receive a prescription issued by a healthcare professional and present it at the pharmacy." },
         { "title": "Secure sign-up", "text": "Sign-up through the Carte Vitale or the digital health identity, for a service framed by health authorities." }
       ]
@@ -213,7 +213,7 @@
         "status": "Completed"
       },
       "map": {
-        "screenTitle": "MDM pharmacies",
+        "screenTitle": "Prognos pharmacies",
         "pin": "Equipped pharmacy",
         "search": "Search for a pharmacy"
       },
@@ -236,11 +236,11 @@
     "hero": {
       "eyebrow": "For pharmacies",
       "title": "A new service for your pharmacy.",
-      "text": "MDM is designed to fit simply on the counter and widen the pharmacy's local healthcare offer."
+      "text": "Prognos is designed to fit simply on the counter and widen the pharmacy's local healthcare offer."
     },
     "benefits": {
       "eyebrow": "Benefits",
-      "title": "What MDM can bring.",
+      "title": "What Prognos can bring.",
       "items": [
         { "title": "A new service", "text": "Offer analyses to your patients, right at the pharmacy." },
         { "title": "Customer loyalty", "text": "A useful, visible service that strengthens the bond with your patients." },
@@ -281,7 +281,7 @@
       "phone": "Tel.",
       "noPhone": "Phone not listed",
       "directions": "Directions",
-      "privacy": "Your location stays in your browser: MDM neither sends nor stores it.",
+      "privacy": "Your location stays in your browser: Prognos neither sends nor stores it.",
       "source": "Source: French national register of health establishments (FINESS), data.gouv.fr. Base map © OpenStreetMap."
     },
     "cta": {
@@ -294,7 +294,7 @@
     "hero": {
       "eyebrow": "Investors",
       "title": "Bringing diagnostics closer to the patient.",
-      "text": "MDM aims to make the pharmacy a local access point to diagnostics, and the MDIAG app the patient's follow-up record."
+      "text": "Prognos aims to make the pharmacy a local access point to diagnostics, and the MDIAG app the patient's follow-up record."
     },
     "vision": {
       "eyebrow": "Vision",
@@ -305,7 +305,7 @@
       "eyebrow": "Project stages",
       "title": "Two stages.",
       "items": [
-        { "title": "The machine", "text": "Design and develop the MDM machine: touchscreen, SPINCHIP slot, slots for nasal and saliva tests and for prepared solutions." },
+        { "title": "The machine", "text": "Design and develop the Prognos machine: touchscreen, SPINCHIP slot, slots for nasal and saliva tests and for prepared solutions." },
         { "title": "The MDIAG app", "text": "Develop the MDIAG app: results, health history, equipped pharmacies, prescriptions and secure sign-up." }
       ],
       "stepLabel": "Stage"
@@ -313,20 +313,20 @@
     "founder": {
       "eyebrow": "Project founder",
       "name": "Marius Mérieux",
-      "role": "Student, founder of the MDM project",
-      "text": "Marius Mérieux designs and leads the MDM project. The project is under development and is looking for partners to reach its next stages.",
+      "role": "Student, founder of the Prognos project",
+      "text": "Marius Mérieux designs and leads the Prognos project. The project is under development and is looking for partners to reach its next stages.",
       "avatarAlt": "Marius Mérieux's initials"
     },
     "cta": {
       "title": "Let's talk about the project.",
-      "text": "Want to know more about MDM and its prospects? Get in touch.",
+      "text": "Want to know more about Prognos and its prospects? Get in touch.",
       "button": "Get in touch"
     }
   },
   "Contact": {
     "hero": {
       "eyebrow": "Contact",
-      "title": "Let's talk about MDM.",
+      "title": "Let's talk about Prognos.",
       "text": "Investor, pharmacist or just curious: leave us a message and we will reply."
     },
     "form": {
@@ -364,7 +364,7 @@
     "intro": "The information below must be completed before the site goes live.",
     "todo": "[To be completed]",
     "sections": [
-      { "title": "Site publisher", "lines": [ "Site name: MDM — Mérieux Diagnostic Machine", "Project founder: Marius Mérieux", "Legal status: [To be completed]", "Address: [To be completed]", "Email: [To be completed]" ] },
+      { "title": "Site publisher", "lines": [ "Site name: Prognos", "Project founder: Marius Mérieux", "Legal status: [To be completed]", "Address: [To be completed]", "Email: [To be completed]" ] },
       { "title": "Publication director", "lines": [ "[To be completed]" ] },
       { "title": "Hosting provider", "lines": [ "Name: [To be completed]", "Address: [To be completed]", "Website: [To be completed]" ] },
       { "title": "Intellectual property", "lines": [ "All site content (texts, visuals, logo, 3D models) is the property of the project founder unless stated otherwise. Any reproduction without permission is prohibited." ] },
@@ -377,7 +377,7 @@
     "sections": [
       { "title": "Data controller", "lines": [ "Marius Mérieux — [Address and email to be completed]" ] },
       { "title": "Data collected", "lines": [ "Through the contact form: name, email address, profile, organization (optional) and message." ] },
-      { "title": "Purpose", "lines": [ "Answering your request and discussing the MDM project." ] },
+      { "title": "Purpose", "lines": [ "Answering your request and discussing the Prognos project." ] },
       { "title": "Legal basis", "lines": [ "Your consent, collected through the form's checkbox." ] },
       { "title": "Retention period", "lines": [ "[To be completed]" ] },
       { "title": "Recipients and processors", "lines": [ "Messages are delivered by email through the Resend service. [To be completed: data location and safeguards]" ] },

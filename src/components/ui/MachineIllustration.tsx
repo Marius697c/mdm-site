@@ -148,7 +148,7 @@ export function MachineIllustration({ alt, zones }: { alt: string; zones?: Machi
           fill="#d9e4f5"
           fontFamily="sans-serif"
         >
-          MDM
+          PROGNOS
         </text>
 
         {/* grilles d'aération côté droit */}
