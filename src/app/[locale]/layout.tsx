@@ -17,9 +17,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: "Meta" });
   return {
     metadataBase: new URL(SITE_URL),
-    title: { default: t("siteName"), template: `%s | MDM` },
+    title: { default: t("siteName"), template: `%s | Prognos` },
     description: t("defaultDescription"),
-    openGraph: { siteName: "MDM", type: "website", locale: locale === "fr" ? "fr_FR" : "en_GB" },
+    openGraph: { siteName: "Prognos", type: "website", locale: locale === "fr" ? "fr_FR" : "en_GB" },
   };
 }
 

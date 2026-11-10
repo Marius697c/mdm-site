@@ -31,7 +31,7 @@ export async function POST(request: Request) {
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL;
-  const from = process.env.CONTACT_FROM_EMAIL ?? "MDM <onboarding@resend.dev>";
+  const from = process.env.CONTACT_FROM_EMAIL ?? "Prognos <onboarding@resend.dev>";
   if (!apiKey || !to) {
     console.error("Contact: RESEND_API_KEY ou CONTACT_TO_EMAIL manquant.");
     return NextResponse.json({ error: "not_configured" }, { status: 503 });
@@ -42,9 +42,9 @@ export async function POST(request: Request) {
     from,
     to,
     replyTo: data.email,
-    subject: `[MDM] Nouveau message — ${data.profile}`,
+    subject: `[Prognos] Nouveau message — ${data.profile}`,
     html: `
-      <h2>Nouveau message depuis le site MDM</h2>
+      <h2>Nouveau message depuis le site Prognos</h2>
       <p><strong>Nom :</strong> ${escapeHtml(data.name)}</p>
       <p><strong>E-mail :</strong> ${escapeHtml(data.email)}</p>
       <p><strong>Profil :</strong> ${escapeHtml(data.profile)}</p>

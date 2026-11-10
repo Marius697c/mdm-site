@@ -11,7 +11,7 @@ export function Logo({ tone = "dark" }: Props) {
   return (
     <Link href="/" aria-label={t("logoLabel")} className="inline-flex flex-col leading-none">
       <span className={`text-2xl font-extrabold tracking-[0.18em] ${main}`}>
-        MDM<span className="text-cyan-500">.</span>
+        Prognos<span className="text-cyan-500">.</span>
       </span>
       <span className={`mt-1 text-xs font-medium ${sub}`}>{t("by")}</span>
     </Link>

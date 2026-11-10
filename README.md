@@ -1,6 +1,6 @@
-# MDM — Mérieux Diagnostic Machine
+# Prognos
 
-Site vitrine de MDM (machine de diagnostic pour pharmacies) et de son application compagnon MDIAG.
+Site vitrine de Prognos (machine de diagnostic pour pharmacies) et de son application compagnon MDIAG.
 Projet porté par Marius Mérieux. *Projet en cours de développement — visuels non contractuels.*
 
 Stack : Next.js 15 (App Router), TypeScript, Tailwind CSS, next-intl (FR par défaut / EN), React Three Fiber + drei, react-hook-form + zod, Resend.
@@ -62,5 +62,5 @@ La clé n'est lue que côté serveur et ne doit jamais être commitée (`.env*` 
 ## À compléter avant la mise en ligne
 
 - Pages **Mentions légales** et **Confidentialité** : remplacer les champs `[À compléter]` dans `src/messages/*.json`.
-- Logo : le logo texte « MDM » est dans `src/components/ui/Logo.tsx`.
+- Logo : le logo texte « Prognos » est dans `src/components/ui/Logo.tsx`.
 - Aucun chiffre n'est présenté hors dimensions de la machine (100 × 60 × 40 cm) : ne pas en inventer.
